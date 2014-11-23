@@ -1,4 +1,4 @@
-# makeCacheMatrix() & cacheSolve() 
+# makeCacheMatrix() & cacheSolve(). 
 
 
 # // makeCacheMatrix()
@@ -75,3 +75,29 @@ cacheSolve <- function(x, ...) {
     inverse
   }
 }
+
+
+# // appendix: testing
+
+# create and set matrix...
+
+x <- rbind(c(1, -0.5), c(-0.5, 1))
+
+m <- makeCacheMatrix(x)
+
+# compute for first time 
+
+> cacheSolve(m)
+computed on the fly...
+          [,1]      [,2]
+[1,] 1.3333333 0.6666667
+[2,] 0.6666667 1.3333333
+
+
+# computed again (this time from cache)
+
+> cacheSolve(m)
+returned from cache...
+          [,1]      [,2]
+[1,] 1.3333333 0.6666667
+[2,] 0.6666667 1.3333333
