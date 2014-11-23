@@ -1,7 +1,17 @@
+# makeCacheMatrix() & cacheSolve() 
 
-# // 1. makeCacheMatrix()
 
-# creates a special "matrix" object that can cache it's inverse...specifically for a matrix it will a) set/get its value and b) set/get the value of its INVERSE. 
+# // makeCacheMatrix()
+
+# function definition: 
+
+	# creates a special "matrix" object that can cache it's inverse.
+
+# function summary: 
+
+	# specifically for a matrix it will a) set/get its value and b) set/get the value of its INVERSE.
+
+# function code...
 
 makeCacheMatrix <- function(x = matrix()) {
   
@@ -28,15 +38,20 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-# // 2. cacheSolve()
+# // cacheSolve()
 
-# cacheSolve computes the inverse of the "matrix" from makeCacheMatrix(). 
+# function definition: 
+	
+	# cacheSolve computes the inverse of the "matrix" from makeCacheMatrix(). 
 
-# SUMMARY: 
-# if() tests if the inverse is already cached...
-	# inverse is cached: return the cached inverse...
-	# inverse is NOT cached: compute the inverse
-# the function always notify's the user where the inversed matrix came from (cache or computed).  
+# function summary: 
+
+	# if() tests if the inverse is already cached...
+	# if inverse is cached THEN return the cached inverse...
+	# if inverse is NOT cached THEN compute the inverse...
+	# the function always notify's the user where the inversed matrix came from (cache or computed). 
+
+# function code... 
 
 cacheSolve <- function(x, ...) {
   # test if the inverse is already cached...
