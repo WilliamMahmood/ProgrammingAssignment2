@@ -83,9 +83,14 @@ cacheSolve <- function(x, ...) {
 
 x <- rbind(c(1, -0.5), c(-0.5, 1))
 
+> x
+     [,1] [,2]
+[1,]  1.0 -0.5
+[2,] -0.5  1.0
+
 m <- makeCacheMatrix(x)
 
-# compute for first time 
+# compute inverse of x for first time 
 
 > cacheSolve(m)
 computed on the fly...
@@ -94,7 +99,7 @@ computed on the fly...
 [2,] 0.6666667 1.3333333
 
 
-# computed again (this time from cache)
+# compute inverse of x again (this time from cache)
 
 > cacheSolve(m)
 returned from cache...
